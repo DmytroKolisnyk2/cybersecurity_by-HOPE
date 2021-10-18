@@ -62,7 +62,7 @@
   max-width: 600px;
   margin-left: 40px;
   @media screen and (max-width: 840px) {
-    z-index: 3;
+    z-index: 4;
     right: -100%;
     top: 85px;
     padding-left: 40px;
@@ -83,12 +83,24 @@
       right: 0;
       max-width: 228px;
       width: 100%;
-      content: "";
+      content: '';
       display: block;
       height: 85px;
       background-color: $main-black;
       transform: skew(-40deg);
       border-left: 4px double $main-red;
+    }
+    &::after {
+      position: absolute;
+      top: -85px;
+      right: -60px;
+      width: 100px;
+      content: '';
+      display: block;
+      height: 185px;
+      transform: skew(-20deg);
+      z-index: 3;
+      background-color: $main-black;
     }
     &--open {
       animation: appearBar 1200ms;
@@ -103,7 +115,7 @@
 @keyframes appearBar {
   0% {
     opacity: 0;
-    filter: blur(3px);
+    filter: blur(300px);
   }
   10% {
     opacity: 1;
@@ -114,7 +126,7 @@
     filter: blur(0);
   }
   60% {
-    opacity:1;
+    opacity: 1;
     filter: blur(3px);
   }
   70% {
@@ -152,6 +164,8 @@
   max-width: 600px;
   width: 100%;
   @media screen and (max-width: 840px) {
+    z-index: 4;
+
     flex-direction: column;
     align-items: start;
     height: 170px;

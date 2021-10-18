@@ -3,7 +3,7 @@
 @import './headerLogo.scss';
 @import './header.scss';
 
-body{
+footer,html,header,main,body{
   background-color: $main-black;
   overflow-x: hidden;
 }
