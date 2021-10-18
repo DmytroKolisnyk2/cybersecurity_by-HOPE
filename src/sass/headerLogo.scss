@@ -1,18 +1,13 @@
-.cyberSecurity__header {
-    margin: 0 auto;
-    max-width: 100vw;
-    max-height: 100vh;
-    // height: 100%;
-    // width: 100%;
-    position: relative;
-}
-
-.cyberSecurity__logo {
-    width: 267px;
+.header__logo {
+    width: 310px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    @media screen and (max-width: 840px) {
+        width: 290px;
+        margin-right: 10px;
+    }
 }
 
 .logo__img {
@@ -30,6 +25,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 840px) {
+        height: 45px;
+        width: 70px;
+    }
+     @media screen and (max-width: 360px) {
+      display: none;
+    }
 }
 
 .logo__img__element {
@@ -52,6 +54,9 @@
     position: relative;
     top: -200px;
     animation: appearTitle 550ms linear 1.6s forwards;
+    @media screen and (min-width: 840px) {
+        font-size: 18px;
+    }
 }
 
 @keyframes appearTitle {
@@ -68,7 +73,7 @@
         pointer-events: initial;
     }
     100%{
-        top: 2px;
+        top: 1px;
         opacity: 1;
         visibility: initial;
         pointer-events: initial;
