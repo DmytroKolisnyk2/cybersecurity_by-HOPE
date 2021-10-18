@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600&display=swap');
 
-%montserrat{
+%montserrat {
   font-family: 'Montserrat Alternates', sans-serif;
 }
 
-%start-2p{
+%start-2p {
   font-family: 'Press Start 2P', cursive;
 }
 
 $main-red: #ff111c;
-$main-black:#333;
+$main-black: #222;
+$linear: linear 200ms;
+$flashing-timing: cubic-bezier(0.34, -0.55, 0.67, 1.43) 300ms;
+// $flashing-timing-long: cubic-bezier(0.89, 0.69, 0.56, 1.93) 6000ms;

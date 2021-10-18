@@ -1,3 +1,8 @@
 @import './reset';
 @import './variables.scss';
 @import './headerLogo.scss';
+@import './header.scss';
+
+body{
+  background-color: $main-black;
+}
