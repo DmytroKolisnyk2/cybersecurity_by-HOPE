@@ -1,19 +1,4 @@
 @import './reset';
 @import './variables';
+@import './introduction';
 
-.main {
-	background: radial-gradient(circle, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(../images/main.gif) ;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	// height: 100vh;
-}
-
-.title {
-	@extend %start-2p;
-	font-size: 32px;
-	text-align: center;
-	color: #ccc;
-	padding-top: 25vh;
-}
