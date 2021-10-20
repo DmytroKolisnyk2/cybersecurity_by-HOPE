@@ -3,10 +3,16 @@
 @import './headerLogo.scss';
 @import './header.scss';
 
-footer,html,header,main,body{
+body {
   background-color: $main-black;
+}
+footer,
+html,
+header,
+main {
   overflow-x: hidden;
 }
+
 .aside__overlay {
   position: fixed;
   width: 100vw;
@@ -22,7 +28,7 @@ footer,html,header,main,body{
   cursor: pointer;
 }
 .bar--open + .aside__overlay {
-    display: block;
-    opacity: 1;
-    transform: scale(1);
+  display: block;
+  opacity: 1;
+  transform: scale(1);
 }
