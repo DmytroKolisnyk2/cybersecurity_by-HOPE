@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600&display=swap");
 
-%montserrat{
-  font-family: 'Montserrat Alternates', sans-serif;
+%montserrat {
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
-%start-2p{
-  font-family: 'Press Start 2P', cursive;
+%start-2p {
+  font-family: "Press Start 2P", cursive;
 }
 
-$main-red: #ff111c;
-$main-black:#333;
+$main-red: #ff000d;
+$main-black: #333;
+$linear: linear 200ms;
+$text-color: #ccc;
