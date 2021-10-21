@@ -1,0 +1,60 @@
+.main {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%);
+  // background-position: center center;
+  // background-repeat: no-repeat;
+  background-size: cover;
+  // background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.introduction__title {
+  @extend %montserrat;
+  font-size: 32px;
+  text-align: center;
+  color: $text-color;
+  // padding-top: 25vh;
+}
+.introduction {
+}
+.main__video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.introduction__btn {
+  @extend %start-2p;
+  font-size: 22px;
+  text-align: center;
+  background-color: $main-red;
+  // display: block;
+  max-width: 220px;
+  // height: 50px;
+  padding:6px 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: $linear;
+  color: $text-color;
+  margin: 0 auto;
+  &>span{
+    position: relative;
+    left: 3px;
+    top: 2px;
+    & span{
+      position: relative;
+      font-size: 28px;
+      right: 2px;
+      // top: -1px;
+    }
+  }
+  &:hover {
+    color: $main-black;
+    background-color: $text-color;
+  }
+}
