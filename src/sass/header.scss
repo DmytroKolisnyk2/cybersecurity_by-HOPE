@@ -7,7 +7,16 @@
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
+  // position: absolute;
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 }
+
 .header__burger {
   display: flex;
   justify-content: space-between;
@@ -157,7 +166,7 @@
     filter: blur(30px);
   }
   100% {
-    // top: 85px;         
+    // top: 85px;
     opacity: 1;
     filter: blur(0);
   }
