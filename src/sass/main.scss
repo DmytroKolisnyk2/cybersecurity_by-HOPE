@@ -3,6 +3,7 @@
 @import './introduction';
 @import './headerLogo.scss';
 @import './header.scss';
+@import './main-content.scss';
 
 body {
   background-color: $main-black;
@@ -13,7 +14,9 @@ header,
 main {
   overflow-x: hidden;
 }
-
+.main{
+  padding: 25px;
+}
 .aside__overlay {
   position: fixed;
   width: 100vw;

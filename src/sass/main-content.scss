@@ -1,0 +1,93 @@
+.main__section {
+  position: relative;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-sizing: border-box;
+  max-width: 1500px;
+  // border-bottom: $line-width $line-type $main-red;
+  border-top: $line-width $line-type $main-red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+  &--odd {
+    border-right: $line-width $line-type $main-red;
+  }
+  &--even {
+    border-left: $line-width $line-type $main-red;
+    & .section__text-wrapper {
+      order: 2;
+      & > .section__marker {
+        left: calc(100% - 22px);
+      }
+    }
+  }
+}
+.section__btn {
+  @include btn(20px, 400px);
+}
+.section__icon {
+  color: $main-red;
+  font-size: 48px !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section__icon-text {
+  display: block;
+  background-color: $main-black;
+  padding: 6px;
+  border-radius: 50%;
+  display: block;
+  font-size: 16px;
+  color: $text-color;
+  @extend %start-2p;
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // z-index: 2;
+}
+.section__icon-wrapper {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  // background-color: #fff;
+}
+.section__marker {
+  top: -22px;
+  left: -18px;
+  position: absolute;
+}
+.section__photo-wrapper {
+  padding: 15px;
+}
+.section__img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+.section__text {
+  @extend %montserrat;
+  color: $text-color;
+  margin-bottom: 20px;
+  font-size: 20px;
+  @media screen and (max-width: 468px) {
+    font-size: 16px;
+  }
+}
+.section__text-wrapper {
+  padding: 15px;
+  max-width: 60%;
+  margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+  }
+  @media screen and (max-width: 468px) {
+    padding: 10px;
+  }
+}
