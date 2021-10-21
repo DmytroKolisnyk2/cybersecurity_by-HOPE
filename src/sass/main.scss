@@ -1,4 +1,35 @@
 @import './reset';
 @import './variables';
 @import './introduction';
+@import './headerLogo.scss';
+@import './header.scss';
 
+body {
+  background-color: $main-black;
+}
+footer,
+html,
+header,
+main {
+  overflow-x: hidden;
+}
+
+.aside__overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: $linear;
+  opacity: 0;
+  transform: scale(0);
+  cursor: pointer;
+}
+.bar--open + .aside__overlay {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}

@@ -9,7 +9,10 @@
   font-family: "Press Start 2P", cursive;
 }
 
-$main-red: #ff000d;
-$main-black: #333;
-$linear: linear 200ms;
+
 $text-color: #ccc;
+$main-red: #ff111c;
+$main-black: #222;
+$linear: linear 200ms;
+$flashing-timing: cubic-bezier(0.34, -0.55, 0.67, 1.43) 300ms;
+// $flashing-timing-long: cubic-bezier(0.89, 0.69, 0.56, 1.93) 6000ms;
