@@ -1,8 +1,12 @@
 @import './reset';
-@import './variables.scss';
+@import './variables';
+@import './introduction';
 @import './headerLogo.scss';
 @import './header.scss';
 @import './adviceSection.scss';
+@import './main-content.scss';
+@import './aboutUs.scss';
+
 
 body {
   background-color: $main-black;
@@ -13,7 +17,9 @@ header,
 main {
   overflow-x: hidden;
 }
-
+.main{
+  padding: 25px;
+}
 .aside__overlay {
   position: fixed;
   width: 100vw;

@@ -1,0 +1,56 @@
+.main {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%);
+  // background-position: center center;
+  // background-repeat: no-repeat;
+  background-size: cover;
+  // background-attachment: fixed;
+  min-height: 100vh;
+}
+.introduction__img{
+  width: 200px;
+  opacity: 0.4;
+  filter: blur(1px);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  &:hover{
+  animation: appearBar 1000ms;
+
+  }
+}
+.introduction__title {
+  @extend %montserrat;
+  font-size: 32px;
+  text-align: center;
+  color: $text-color;
+  // padding-top: 25vh;
+  max-width: 700px;
+  z-index: 2;
+  position: relative;
+}
+.introduction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 1500px;
+  margin: 70px auto 0;
+  border-left: $line-width $line-type $main-red;
+  border-radius: 5px;
+  min-height: calc(100vh - 70px);
+}
+.main__video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+.introduction__btn {
+  position: absolute;
+  top: 0;
+  @include btn(22px, 220px);
+  left: -$line-width;
+
+}

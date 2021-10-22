@@ -1,0 +1,91 @@
+.title {
+  @extend %montserrat;
+  font-size: 32px;
+  text-align: center;
+  color: $text-color;
+}
+
+.about {
+  padding-top: 200px;
+  margin-bottom: 20px;
+}
+
+.about__title {
+  font-size: 36px;
+  color: $main-red;
+}
+
+.about__wrapper {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.hexagon-wrap {
+  filter: drop-shadow(5px 14px 3px #ff111d5e);
+}
+
+.hexagon {
+  background: $main-red;
+  position: relative;
+  margin: 5vh auto;
+  width: 300px;
+  height: 255px;
+  box-shadow: 0 0 100px rgba(250,17,28,0.8);
+}
+
+.hexagon::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  box-shadow: 0 0 100px rgba(250,17,28,0.8);
+  background:url(http://webneel.com/daily/sites/default/files/images/daily/09-2014/6-nature-photography-pedraterrinha.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.hexagon:hover {
+  cursor: pointer;
+}
+
+.hexagon,
+.hexagon::before {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  box-shadow: 0 0 100px rgba(250,17,28,0.8);
+}
+
+.hexagon::after {
+  box-shadow: 0 0 100px rgba(250,17,28,0.8);
+}
+.hexagon .img__wrapper {
+  
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  transition: all 0.7s;
+  opacity: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.img {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hexagon .img__wrapper:hover {
+  opacity: 1;
+  visibility: visible;
+}
+.hexagon:hover .img__wrapper{
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 15;
+}
