@@ -44,7 +44,9 @@
   //     $main-red,
   //     $main-red,
   //   ) 1 100%;
-  -webkit-moz-border-image-slice: 1 1;
+  -webkit-border-image-slice: 1 1;
+  -moz-border-image-slice: 1 1;
+  border-image-slice: 1 1;
   min-height: calc(100vh - 70px);
 }
 
@@ -62,7 +64,19 @@
   //   ) 40 stretch stretch;
   // }
   0%{
-    -webkit-moz-border-image: 
+    -webkit-border-image: 
+    linear-gradient( 
+      to bottom,
+      $main-red,
+      transparent
+    )40 stretch stretch;
+    -moz-border-image: 
+    linear-gradient( 
+      to bottom,
+      $main-red,
+      transparent
+    )40 stretch stretch;
+    border-image: 
     linear-gradient( 
       to bottom,
       $main-red,
@@ -71,6 +85,18 @@
   }
   100% {
     -webkit-moz-border-image: 
+    linear-gradient(
+      to bottom,  
+      $main-red,
+      $main-red,
+    ) 40 stretch stretch;
+    -moz-border-image: 
+    linear-gradient(
+      to bottom,  
+      $main-red,
+      $main-red,
+    ) 40 stretch stretch;
+    border-image: 
     linear-gradient(
       to bottom,  
       $main-red,
