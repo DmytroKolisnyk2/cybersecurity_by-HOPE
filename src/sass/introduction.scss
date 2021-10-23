@@ -44,7 +44,7 @@
   //     $main-red,
   //     $main-red,
   //   ) 1 100%;
-  border-image-slice: 1 1;
+  -webkit-moz-border-image-slice: 1 1;
   min-height: calc(100vh - 70px);
 }
 
@@ -62,7 +62,7 @@
   //   ) 40 stretch stretch;
   // }
   0%{
-    border-image: 
+    -webkit-moz-border-image: 
     linear-gradient( 
       to bottom,
       $main-red,
@@ -70,7 +70,7 @@
     )40 stretch stretch;
   }
   100% {
-    border-image: 
+    -webkit-moz-border-image: 
     linear-gradient(
       to bottom,  
       $main-red,
