@@ -18,6 +18,31 @@ function checkScroll() {
 
 window.addEventListener('scroll', checkScroll);
 
+const options = {
+  root: null,
+  threshold: 0.75,
+  rootMargin: '0px',
+};
+
+const onEntry = (entries, observer) => {
+  entries.forEach(entry => {
+    const target = entry.target;
+    if(entry.isIntersecting) {
+      target.classList.add('animatedBorder');
+      observer.unobserve(target)
+    }
+});
+};
+
+const observer = new IntersectionObserver(onEntry, options);
+
+const arrayTargets = [...document.querySelector('.main').children];
+
+arrayTargets.push(document.querySelector('.main__section--before'), document.querySelector('.main__section--after'), document.querySelector('.block__line'));
+
+arrayTargets.forEach(item => {
+  observer.observe(item);
+});
 // video.pause();
 
 
