@@ -27,6 +27,7 @@
     "sass": "^1.32.8"
   },
   "dependencies": {
+    "gumshoejs": "^5.1.2",
     "lodash.throttle": "^4.1.1",
     "wow.js": "^1.2.2"
   }
