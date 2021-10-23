@@ -18,6 +18,9 @@ header,
 main {
   overflow-x: hidden;
 }
+section{
+  transition: 1000ms linear;
+}
 .main{
   padding: 25px;
 }
