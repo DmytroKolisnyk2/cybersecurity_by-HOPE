@@ -51,6 +51,8 @@
 }
 
 .animatedBorder {
+  -webkit-animation: animatedBorder 2s linear 1.5s forwards;
+  -moz-animation: animatedBorder 2s linear 1.5s forwards;
   animation: animatedBorder 2s linear 1.5s forwards;
 }
 
