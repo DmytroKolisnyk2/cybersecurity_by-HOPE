@@ -9,6 +9,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &--last {
+    &::after {
+      content: '';
+      display: block;
+      width: 50%;
+      // height: 50px;
+      // background-color: #fff;
+      border-bottom: $line-width double $main-red;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    &::before {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 105px;
+      // background-color: #fff;
+      opacity: 0.4;
+      border-left: $line-width double $main-red;
+      position: absolute;
+      bottom: -100px;
+      right: calc(50% - 2px);
+      transform: translate(50%);
+    }
+  }
   @media screen and (max-width: 768px) {
     flex-wrap: wrap;
   }
@@ -70,6 +96,7 @@
   object-fit: contain;
   height: 100%;
   width: 100%;
+  border: 2px solid $main-red;
 }
 .section__text {
   @extend %montserrat;

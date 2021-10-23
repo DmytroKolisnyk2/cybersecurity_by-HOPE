@@ -1,24 +1,29 @@
 .title {
-  @extend %montserrat;
-  font-size: 32px;
+  @extend %start-2p;
+  font-size: 18px;
   text-align: center;
   color: $text-color;
-}
-
-.about {
-  padding-top: 200px;
   margin-bottom: 20px;
 }
 
+.about {
+  padding-top: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
 .about__title {
-  font-size: 36px;
   color: $main-red;
+   @extend %start-2p;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 .about__wrapper {
-  margin-top: 5vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px -20px 0 0;
 }
 .hexagon-wrap {
   filter: drop-shadow(5px 14px 3px #ff111d5e);
@@ -27,10 +32,11 @@
 .hexagon {
   background: $main-red;
   position: relative;
-  margin: 5vh auto;
   width: 300px;
   height: 255px;
   box-shadow: 0 0 100px rgba(250,17,28,0.8);
+  margin-bottom: 20px;
+  margin-right: 25px;
 }
 
 .hexagon::before {
@@ -45,9 +51,6 @@
   background-size: cover;
 }
 
-.hexagon:hover {
-  cursor: pointer;
-}
 
 .hexagon,
 .hexagon::before {
@@ -59,27 +62,24 @@
   box-shadow: 0 0 100px rgba(250,17,28,0.8);
 }
 .hexagon .img__wrapper {
-  
   box-sizing: border-box;
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.7s;
+  opacity: 0;
+}
+.img {
+  // position: relative;
+  width: 42px;
+  height: 42px;
   // top: 50%;
   // left: 50%;
   // transform: translate(-50%, -50%);
-  transition: all 0.7s;
-  opacity: 0;
-  display: flex;
-  justify-content: space-evenly;
-}
-.img {
-  position: relative;
-  width: 42px;
-  height: 42px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .hexagon .img__wrapper:hover {
   opacity: 1;
@@ -87,5 +87,32 @@
 }
 .hexagon:hover .img__wrapper{
   background: rgba(0, 0, 0, 0.5);
-  z-index: 15;
+  z-index: 5;
+}
+.img__link{
+  // height: 42px;
+  background-color: #ff111d50;
+  padding: 5px;
+  display: block;
+  border-radius: 5px;
+}
+.hexagon__links-wrapper{
+  //   box-sizing: border-box;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.7s;
+}
+.about__card__title {
+  margin-right: 25px;
+  margin-bottom: 10px;
+}
+.about__card__text{
+  @extend %start-2p;
+  font-size: 14px;
+  text-align: center;
+  color: $text-color;
+  margin-right: 25px;
+  margin-bottom: 20px;
 }
