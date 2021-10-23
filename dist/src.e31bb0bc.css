@@ -354,10 +354,12 @@ h6 {
   overflow: hidden;
 }
 .header__wrapper {
-  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 10;
 }
 
 .header__burger {
@@ -533,16 +535,27 @@ h6 {
   }
 }
 
-.list__link {
+.list__item {
+  border-bottom: 3px double transparent;
+  border-radius: 2px;
   transition: linear 200ms;
+}
+.list__item:hover {
+  border-bottom: 3px double #ff111c;
+}
+
+.list__link {
   padding-bottom: 4px;
   color: #ff111c;
   font-size: 16px;
-  border-bottom: 3px double transparent;
-  border-radius: 2px;
 }
-.list__link:hover {
+
+.active {
   border-bottom: 3px double #ff111c;
+}
+
+.main .active {
+  border-bottom: none;
 }
 
 .section__advice {

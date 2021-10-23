@@ -5,6 +5,7 @@ import throttle from 'lodash.throttle';
 import WOW from 'wow.js/dist/wow';
 // import 'animate.css/animate.min.css';
 import 'wow.js/css/libs/animate.css';
+import Gumshoe from 'gumshoejs';
 
 
 
@@ -33,3 +34,6 @@ new WOW().init();
 // setInterval(function () {
 //   video.currentTime = window.pageYOffset / 2230;
 // }, 10);
+
+const spy = new Gumshoe('#menu a');
+console.log(Gumshoe)

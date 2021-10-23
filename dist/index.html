@@ -27,7 +27,7 @@
             <span class="burger__part--3"></span>
         </div>
         <nav class="header__menu menu bar">
-            <ul class="menu__list list">
+            <ul id="menu" class="menu__list list">
                 <li class="list__item">
                     <a href="#start" class="list__link">Вступ</a>
                 </li>
@@ -49,15 +49,13 @@
         <video loop="" muted="" class="main__video" src="/bg_video.17433f91.mp4"></video>
       <!-- <main style="visibility: visible; animation-delay: 2s; animation-name: slideInRight;" class="main wow slideInRight"> -->
       <main class="main">
-        <section class="introduction">
+        <section id="start" class="introduction">
   <h2 class="introduction__title">
     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos eaque accusamus illum
     similique.
   </h2>
-  <a target="_blank" style="display: block" href="https://prison-fakes.ru/s/1.php?t=">
     <img class="introduction__img" src="/hacker-transparent.0f8d8640.png" alt="no-img">
-  </a>
-  <a href="#start" class="introduction__btn">
+  <a href="#journey" class="introduction__btn">
     <span>по<span>ї</span>хали!</span>
   </a>
 </section>
@@ -65,7 +63,7 @@
         <section class="main__section main__section--odd">
   <div class="section__text-wrapper">
     <div class="section__marker">
-      <div id="start" class="section__icon-wrapper">
+      <div id="journey" class="section__icon-wrapper">
         <span class="section__icon-text">1</span>
         <span class="material-icons section__icon">location_searching</span>
       </div>
@@ -138,7 +136,7 @@
   </div>
 </section>
 
-        <section class="section__advice">
+        <section class="section__advice" id="advices">
   <h2 class="section__advice__title">поради з кібербезпеки</h2>
   <div class="section__advice__wrapper__content">
     <div class="block__line"></div>
@@ -216,7 +214,7 @@
     </div>
 </section>
         <!-- <include src='./partials/final_section.html'></include> -->
-        <section class="about">
+        <section class="about" id="team">
   <h2 class="about__title title">About us(sus)</h2>
   <div class="about__wrapper  bounceInRight wow">
     <div class="about__card">
