@@ -45,6 +45,10 @@
     border-left: $line-width $line-type $main-red;
     & .section__text-wrapper {
       order: 2;
+      @media screen and (max-width: 768px) {
+        order: 0;
+        // max-width: 100%;
+      }
       & > .section__marker {
         left: calc(100% - 22px);
       }
@@ -85,6 +89,7 @@
   // background-color: #fff;
 }
 .section__marker {
+  z-index: 2;
   top: -22px;
   left: -18px;
   position: absolute;

@@ -150,9 +150,16 @@ h6 {
   max-width: 700px;
   z-index: 2;
   position: relative;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .introduction__title {
+    font-size: 20px;
+  }
 }
 
 .introduction {
+  flex-direction: column;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -160,7 +167,6 @@ h6 {
   position: relative;
   max-width: 1500px;
   margin: 70px auto 0;
-  border-left: 5px double #ff111c;
   border-radius: 5px;
   min-height: calc(100vh - 70px);
 }
@@ -175,8 +181,8 @@ h6 {
 }
 
 .introduction__btn {
-  position: absolute;
-  top: 0;
+  z-index: 1;
+  position: relative;
   font-size: 22px;
   text-align: center;
   background-color: #ff111c;
@@ -190,7 +196,6 @@ h6 {
   transition: linear 200ms;
   color: #ccc;
   margin: 0 auto;
-  left: -5px;
 }
 .introduction__btn > span {
   position: relative;
@@ -205,6 +210,41 @@ h6 {
 .introduction__btn:hover {
   color: #222;
   background-color: #ccc;
+}
+
+.introduction__btn-wrapper {
+  flex-basis: 2;
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.introduction__content-wrapper {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.introduction__border {
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: -8px;
+  flex-basis: 1;
+  height: calc(50% - 2.5px);
+  width: 50%;
+  border-top: 5px double #ff111c;
+  border-left: 5px double #ff111c;
+}
+
+.introduction__title-wrapper {
+  flex-basis: 90%;
+  flex-grow: 1;
+  display: flex;
+  align-items: end;
 }
 
 .header__logo {
@@ -585,6 +625,7 @@ h6 {
   height: auto;
   position: relative;
   overflow: hidden;
+  padding-bottom: 75px;
 }
 
 .advice__content__element {
@@ -598,15 +639,9 @@ h6 {
 .block {
   width: 90px;
   height: 42px;
-  margin-bottom: 8px;
+  margin-bottom: 18px;
   position: relative;
 }
-@media screen and (min-width: 768px) {
-  .block {
-    margin-bottom: 0;
-  }
-}
-
 .block svg {
   width: 100%;
   height: 100%;
@@ -632,9 +667,8 @@ h6 {
   left: 50%;
   transform: translate(-50%, -50%);
   height: 100%;
-  background-color: #ff111c;
-  border: 1px solid #ff111c;
-  z-index: -1;
+  border-left: 5px double #ff111c;
+  opacity: 0.6;
 }
 
 .advice__content__pair {
@@ -643,7 +677,7 @@ h6 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 8px;
+  margin-bottom: 18px;
 }
 @media screen and (min-width: 768px) {
   .advice__content__pair {
@@ -653,31 +687,37 @@ h6 {
 }
 
 .pair1__text {
-  max-width: 90%;
-  width: 100%;
-  font-size: 14px;
-  font-weight: 500;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  position: relative;
+  text-align: left;
+  max-width: 70%;
+  font-weight: 400;
+  color: #ccc;
   border-radius: 5px;
+  font-size: 18px;
+  padding: 15px;
+}
+@media screen and (max-width: 768px) {
+  .pair1__text {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 468px) {
+  .pair1__text {
+    font-size: 16px;
+    padding: 10px;
+  }
 }
 @media screen and (min-width: 768px) {
   .pair1__text {
     order: 1;
-    max-width: 60%;
   }
-}
-
-.pair1__text__title {
-  color: #ff111c;
-  text-transform: uppercase;
 }
 
 .pair1__wrapper__img {
   position: relative;
   max-width: 40%;
-  width: 100%;
-  height: 150px;
+  height: 100%;
   margin-bottom: 8px;
   border: 2px solid #ff111c;
 }
@@ -687,11 +727,13 @@ h6 {
     margin-bottom: 8px;
   }
 }
+@media screen and (max-width: 768px) {
+  .pair1__wrapper__img {
+    max-width: 100%;
+  }
+}
 
 .pair1__img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -703,6 +745,11 @@ h6 {
 
 .pair2__text {
   order: 2;
+}
+
+.pair1__text__title {
+  color: #ff111c;
+  text-transform: uppercase;
 }
 
 .main__section {
@@ -750,6 +797,11 @@ h6 {
 }
 .main__section--even .section__text-wrapper {
   order: 2;
+}
+@media screen and (max-width: 768px) {
+  .main__section--even .section__text-wrapper {
+    order: 0;
+  }
 }
 .main__section--even .section__text-wrapper > .section__marker {
   left: calc(100% - 22px);
@@ -816,6 +868,7 @@ h6 {
 }
 
 .section__marker {
+  z-index: 2;
   top: -22px;
   left: -18px;
   position: absolute;

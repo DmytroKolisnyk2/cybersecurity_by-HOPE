@@ -6,16 +6,15 @@
   // background-attachment: fixed;
   min-height: 100vh;
 }
-.introduction__img{
+.introduction__img {
   width: 200px;
   opacity: 0.4;
   filter: blur(1px);
   position: absolute;
   bottom: 0;
   right: 0;
-  &:hover{
-  animation: appearBar 1000ms;
-
+  &:hover {
+    animation: appearBar 1000ms;
   }
 }
 .introduction__title {
@@ -27,8 +26,13 @@
   max-width: 700px;
   z-index: 2;
   position: relative;
+  margin-bottom: 40px;
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
 }
 .introduction {
+  flex-direction: column;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -36,7 +40,7 @@
   position: relative;
   max-width: 1500px;
   margin: 70px auto 0;
-  border-left: $line-width $line-type $main-red;
+  // border-left: $line-width $line-type $main-red;
   border-radius: 5px;
   min-height: calc(100vh - 70px);
 }
@@ -49,9 +53,66 @@
   z-index: -1;
 }
 .introduction__btn {
-  position: absolute;
-  top: 0;
+  // position: absolute;
+  // bottom: 125px;
+  // right: 50%;
+  // transform: translate(50%, 0%);
+  z-index: 1;
+  position: relative;
   @include btn(22px, 220px);
-  left: -$line-width;
+}
 
+.introduction__btn-wrapper {
+  flex-basis: 2;
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  // flex-grow: 1;
+  // flex-basis: 1;
+  // &::after {
+  //   content: '';
+  //   display: block;
+  //   height: 100%;
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   border-left: $line-width $line-type $main-red;
+  //   border-radius: 15px;
+  // }
+  // &::before {
+  //   content: '';
+  //   display: block;
+  //   width: 50%;
+  //   height: 0px;
+  //   position: absolute;
+  //   bottom: calc(150px - $line-width/2);
+  //   left: 0;
+  //   border-top: $line-width $line-type $main-red;
+  //   border-radius: 15px;
+  // }
+}
+.introduction__content-wrapper {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+.introduction__border {
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: -8px;
+  flex-basis: 1;
+  height: calc(50% - $line-width/2);
+  width: 50%;
+  border-top: $line-width $line-type $main-red;
+  border-left: $line-width $line-type $main-red;
+}
+.introduction__title-wrapper {
+  flex-basis: 90%;
+  flex-grow: 1;
+  display: flex;
+  align-items: end;
 }
