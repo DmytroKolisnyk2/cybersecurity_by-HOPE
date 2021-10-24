@@ -354,7 +354,7 @@ h6 {
   overflow: hidden;
 }
 .header__wrapper {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.75);
   position: fixed;
   top: 0;
   left: 0;
@@ -385,7 +385,7 @@ h6 {
   background-color: #ff111c;
   transition: linear 200ms;
 }
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 841px) {
   .header__burger {
     display: none;
   }
