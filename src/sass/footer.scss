@@ -14,21 +14,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media screen and (max-width: 320px) {
-        width: 100%;
-        flex-direction: column;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
     }
 }
 
 .content__aboutUs {
-    @media screen and (max-width: 320px) {
         margin-bottom: 20px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0;
     }
 }
 
 .content__source {
-    @media screen and (max-width: 320px) {
         margin-bottom: 20px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0;
     }
 }
 
