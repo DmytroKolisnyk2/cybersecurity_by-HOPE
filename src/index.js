@@ -26,3 +26,20 @@ new WOW().init();
 const spy = new Gumshoe('#menu a');
 
 window.addEventListener('scroll', throttle(hideHeader, 100));
+const options = {
+  root: document.querySelector('.scroll-list'),
+  rootMargin: '0px',
+  threshold: 1
+}
+const target = document.querySelector('.cyberSecurity__footer');
+const onEntry = (entries, observer) => {
+  entries.forEach(entry => {
+    const target = entry.target;
+    if (entry.isIntersecting) {
+
+        observer.unobserve(target)
+    }
+})
+};
+
+const observer = new IntersectionObserver(onEntry, options)

@@ -1,0 +1,67 @@
+.cyberSecurity__footer {
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.footer__content {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 320px) {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+.content__aboutUs {
+    @media screen and (max-width: 320px) {
+        margin-bottom: 20px;
+    }
+}
+
+.content__source {
+    @media screen and (max-width: 320px) {
+        margin-bottom: 20px;
+    }
+}
+
+
+.source__content {
+    width: 115px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer__title {
+    color: $main-red;
+    @extend %start-2p;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.footer__title__word {
+    color: $text-color;
+    text-transform: none;
+}
+
+.content__link {
+    font-weight: 500;
+    color: $text-color;
+    font-size: 16px;
+    @extend %montserrat;
+}
+
+.title1{
+    animation-iteration-count: infinite;
+}
