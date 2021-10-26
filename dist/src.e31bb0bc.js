@@ -1300,9 +1300,9 @@ new _wow.default().init();
 const spy = new _gumshoejs.default('#menu a');
 window.addEventListener('scroll', (0, _lodash.default)(_hideHeader.hideHeader, 100));
 const options = {
-  root: document.querySelector('.scroll-list'),
+  root: null,
   rootMargin: '0px',
-  threshold: 1
+  threshold: 0.5
 };
 const target = document.querySelector('.cyberSecurity__footer');
 
@@ -1311,12 +1311,15 @@ const onEntry = (entries, observer) => {
     const target = entry.target;
 
     if (entry.isIntersecting) {
+      // console.log(target)
+      document.querySelectorAll('.title1').forEach(item => item.classList.add('title--animation'));
       observer.unobserve(target);
     }
   });
 };
 
 const observer = new IntersectionObserver(onEntry, options);
+observer.observe(target);
 },{"./sass/main.scss":"sass/main.scss","material-design-icons/iconfont/material-icons.css":"../node_modules/material-design-icons/iconfont/material-icons.css","./js/openBar":"js/openBar.js","lodash.throttle":"../node_modules/lodash.throttle/index.js","wow.js/dist/wow":"../node_modules/wow.js/dist/wow.js","wow.js/css/libs/animate.css":"../node_modules/wow.js/css/libs/animate.css","gumshoejs":"../node_modules/gumshoejs/dist/gumshoe.min.js","./js/hideHeader":"js/hideHeader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -1345,7 +1348,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50988" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51149" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

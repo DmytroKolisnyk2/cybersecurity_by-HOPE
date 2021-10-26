@@ -27,19 +27,21 @@ const spy = new Gumshoe('#menu a');
 
 window.addEventListener('scroll', throttle(hideHeader, 100));
 const options = {
-  root: document.querySelector('.scroll-list'),
+  root: null,
   rootMargin: '0px',
-  threshold: 1
+  threshold: 0.5
 }
 const target = document.querySelector('.cyberSecurity__footer');
 const onEntry = (entries, observer) => {
   entries.forEach(entry => {
     const target = entry.target;
     if (entry.isIntersecting) {
-
+      // console.log(target)
+      document.querySelectorAll('.title1').forEach(item => item.classList.add('title--animation'));
         observer.unobserve(target)
     }
 })
 };
 
 const observer = new IntersectionObserver(onEntry, options)
+observer.observe(target);

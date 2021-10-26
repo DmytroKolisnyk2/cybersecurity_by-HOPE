@@ -1137,6 +1137,10 @@ h6 {
   text-transform: uppercase;
 }
 
+.title__text {
+  color: #ff111c;
+}
+
 .footer__title__word {
   color: #ccc;
   text-transform: none;
@@ -1149,7 +1153,11 @@ h6 {
 }
 
 .title1 {
-  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+.title--animation {
+  animation-play-state: running;
 }
 
 body {

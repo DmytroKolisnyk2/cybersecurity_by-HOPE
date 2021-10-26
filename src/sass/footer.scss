@@ -21,14 +21,14 @@
 }
 
 .content__aboutUs {
-        margin-bottom: 20px;
+    margin-bottom: 20px;
     @media screen and (min-width: 768px) {
         margin-bottom: 0;
     }
 }
 
 .content__source {
-        margin-bottom: 20px;
+    margin-bottom: 20px;
     @media screen and (min-width: 768px) {
         margin-bottom: 0;
     }
@@ -52,6 +52,10 @@
     text-transform: uppercase;
 }
 
+.title__text {
+    color: $main-red;
+}
+
 .footer__title__word {
     color: $text-color;
     text-transform: none;
@@ -65,5 +69,9 @@
 }
 
 .title1{
-    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+.title--animation {
+    animation-play-state: running;
 }
