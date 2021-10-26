@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кібербезпека</title>
   <link rel="stylesheet" href="/src.e31bb0bc.css"></head>
+
   <body>
     <!-- <h1 style="font-size: 200px;" class="animate__animated animate__bounce">An animated element</h1> -->
 
-      <div class="header__wrapper">
+    <div class="header__wrapper">
     <header class="header">
         <a class="header__logo" href="#">
             <div class="logo__img__container">
@@ -46,10 +47,17 @@
     
     </header>
 </div>
-        <video loop="" muted="" class="main__video" src="/bg_video.17433f91.mp4"></video>
-      <!-- <main style="visibility: visible; animation-delay: 2s; animation-name: slideInRight;" class="main wow slideInRight"> -->
-      <main class="main">
-        <section id="start" class="introduction">
+    <video loop="" muted="" class="main__video">
+      <source src="/bg_video.17433f91.mp4" type="video/mp4">
+      <source src="/bg_video.86f2cc42.ogx" type="video/ogv">
+      <source src="/bg_video.11d5cb69.webm" type="video/webm">
+    </video>
+    <!-- <main style="visibility: visible; animation-delay: 2s; animation-name: slideInRight;" class="main wow slideInRight"> -->
+    <main class="main">
+      <a href="#start" class="main__arrow main__arrow--hidden">
+        <span class="arrow__svg material-icons">keyboard_arrow_down</span>
+      </a>
+      <section id="start" class="introduction">
  <div class="introduction__content-wrapper">
     <div class="introduction__title-wrapper">
       <h2 class="introduction__title">
@@ -67,7 +75,7 @@
  </div>
 </section>
 
-        <section class="main__section main__section--odd">
+      <section class="main__section main__section--odd">
   <div class="section__text-wrapper">
     <div class="section__marker">
       <div id="journey" class="section__icon-wrapper">
@@ -143,7 +151,7 @@
   </div>
 </section>
 
-        <section class="section__advice" id="advices">
+      <section class="section__advice" id="advices">
   <h2 class="section__advice__title">поради з кібербезпеки</h2>
   <div class="section__advice__wrapper__content">
     <div class="block__line"></div>
@@ -233,8 +241,8 @@
   </div>
 </section>
 
-        <!-- <include src='./partials/final_section.html'></include> -->
-        <section class="about" id="team">
+      <!-- <include src='./partials/final_section.html'></include> -->
+      <section class="about" id="team">
   <h2 class="about__title title">About us(sus)</h2>
   <div class="about__wrapper  bounceInRight wow">
     <div class="about__card">
@@ -284,7 +292,7 @@
     </div>
   </div>
 </section>
-      </main>
+    </main>
     <script src="/src.e31bb0bc.js"></script>
   </body>
 </html>

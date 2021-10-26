@@ -6,6 +6,7 @@ import WOW from 'wow.js/dist/wow';
 import 'wow.js/css/libs/animate.css';
 import Gumshoe from 'gumshoejs';
 import { hideHeader } from './js/hideHeader';
+import './js/checkArrow';
 
 document.querySelector('.header__burger').addEventListener('click', openBar);
 document.querySelector('.aside__overlay').addEventListener('click', closeOverlayBar);

@@ -1263,7 +1263,22 @@ const toggleHeader = (direction, curScroll) => {
     prevDirection = direction;
   }
 };
-},{}],"index.js":[function(require,module,exports) {
+},{}],"js/checkArrow.js":[function(require,module,exports) {
+"use strict";
+
+var _lodash = _interopRequireDefault(require("lodash.throttle"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const scrollArrowRef = document.querySelector('.main__arrow');
+window.addEventListener('scroll', (0, _lodash.default)(() => {
+  if (window.pageYOffset > 680) {
+    scrollArrowRef.classList.remove('main__arrow--hidden');
+  } else {
+    scrollArrowRef.classList.add('main__arrow--hidden');
+  }
+}, 400));
+},{"lodash.throttle":"../node_modules/lodash.throttle/index.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
@@ -1282,6 +1297,8 @@ var _gumshoejs = _interopRequireDefault(require("gumshoejs"));
 
 var _hideHeader = require("./js/hideHeader");
 
+require("./js/checkArrow");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.querySelector('.header__burger').addEventListener('click', _openBar.openBar);
@@ -1299,7 +1316,7 @@ window.addEventListener('scroll', (0, _lodash.default)(checkScroll, 150));
 new _wow.default().init();
 const spy = new _gumshoejs.default('#menu a');
 window.addEventListener('scroll', (0, _lodash.default)(_hideHeader.hideHeader, 100));
-},{"./sass/main.scss":"sass/main.scss","material-design-icons/iconfont/material-icons.css":"../node_modules/material-design-icons/iconfont/material-icons.css","./js/openBar":"js/openBar.js","lodash.throttle":"../node_modules/lodash.throttle/index.js","wow.js/dist/wow":"../node_modules/wow.js/dist/wow.js","wow.js/css/libs/animate.css":"../node_modules/wow.js/css/libs/animate.css","gumshoejs":"../node_modules/gumshoejs/dist/gumshoe.min.js","./js/hideHeader":"js/hideHeader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./sass/main.scss":"sass/main.scss","material-design-icons/iconfont/material-icons.css":"../node_modules/material-design-icons/iconfont/material-icons.css","./js/openBar":"js/openBar.js","lodash.throttle":"../node_modules/lodash.throttle/index.js","wow.js/dist/wow":"../node_modules/wow.js/dist/wow.js","wow.js/css/libs/animate.css":"../node_modules/wow.js/css/libs/animate.css","gumshoejs":"../node_modules/gumshoejs/dist/gumshoe.min.js","./js/hideHeader":"js/hideHeader.js","./js/checkArrow":"js/checkArrow.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -1327,7 +1344,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38397" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35977" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
