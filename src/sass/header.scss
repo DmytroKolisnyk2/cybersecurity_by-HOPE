@@ -228,6 +228,7 @@
   z-index: 11;
   background: $main-black;
   border-radius: 5px;
+  border: 1px solid $main-red;
 }
 .submenu__item {
   text-align: center;
@@ -245,9 +246,7 @@
 }
 
 @media screen and (max-width: 840px) {
-  .list__submenu {
-    background-color: #ccc;
-  }
+
   .menu__list{
     position: relative;
     transform: skewX(-20deg);

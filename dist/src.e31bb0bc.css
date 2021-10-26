@@ -611,6 +611,7 @@ h6 {
   z-index: 11;
   background: #222;
   border-radius: 5px;
+  border: 1px solid #ff111c;
 }
 
 .submenu__item {
@@ -630,10 +631,6 @@ h6 {
 }
 
 @media screen and (max-width: 840px) {
-  .list__submenu {
-    background-color: #ccc;
-  }
-
   .menu__list {
     position: relative;
     transform: skewX(-20deg);
