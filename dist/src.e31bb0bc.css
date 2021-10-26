@@ -629,14 +629,14 @@ h6 {
   transform: translateY(-50%);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 840px) {
   .list__submenu {
     background-color: #ccc;
   }
 
   .menu__list {
     position: relative;
-    transform: none;
+    transform: skewX(-20deg);
   }
 }
 .list__item {
