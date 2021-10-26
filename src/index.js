@@ -24,6 +24,7 @@ window.addEventListener('scroll', throttle(checkScroll, 150));
 
 new WOW().init();
 
-const spy = new Gumshoe('#menu a');
+const spy = new Gumshoe('#menu .list__link');
+console.log(document.querySelectorAll('#menu .list__link'))
 
 window.addEventListener('scroll', throttle(hideHeader, 100));
