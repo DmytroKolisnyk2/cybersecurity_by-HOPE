@@ -757,6 +757,7 @@ h6 {
 
 .pair1__text__title {
   color: #ff111c;
+  font-size: 16px;
   text-transform: uppercase;
 }
 
@@ -1169,23 +1170,23 @@ h6 {
 }
 
 .footer__title__word {
+  transition: linear 200ms;
   color: #ccc;
   text-transform: none;
 }
 
 .content__link {
+  display: inline-block;
   font-weight: 500;
   color: #ccc;
   font-size: 17px;
-  display: block;
   margin-bottom: 5px;
   transition: linear 200ms;
   padding-bottom: 2px;
   border-bottom: 2px solid transparent;
 }
 .content__link:hover {
-  color: #ff111c;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #ff111c;
 }
 
 .content__link--uppercase {

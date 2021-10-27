@@ -81,23 +81,23 @@
 }
 
 .footer__title__word {
+    transition: $linear;
     color: $text-color;
     text-transform: none;
 }
 
 .content__link {
+    display: inline-block;
     font-weight: 500;
     color: $text-color;
     font-size: 17px;
-    display: block;
     margin-bottom: 5px;
     @extend %montserrat;
     transition: $linear;
     padding-bottom: 2px;
     border-bottom: 2px solid transparent;
     &:hover {
-        color: $main-red;
-        border-bottom: 2px solid $text-color;
+        border-bottom: 2px solid $main-red;
     }
 }
 
