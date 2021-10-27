@@ -1089,9 +1089,9 @@ h6 {
 }
 
 .footer__content {
+  max-width: 1500px;
   width: 100%;
   margin: 0 auto;
-  text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1100,10 +1100,12 @@ h6 {
 @media screen and (min-width: 768px) {
   .footer__content {
     flex-direction: row;
+    margin-bottom: 15px;
   }
 }
 
 .content__aboutUs {
+  width: 40%;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
@@ -1112,22 +1114,34 @@ h6 {
   }
 }
 
-.content__source {
-  margin-bottom: 20px;
-}
-@media screen and (min-width: 768px) {
-  .content__source {
-    margin-bottom: 0;
-  }
-}
-
 .source__content {
-  width: 115px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .source__content {
+    width: 50%;
+  }
+}
+
+.content__anotherProjects {
+  margin-bottom: 0;
+  width: 100%;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .content__anotherProjects {
+    width: 60%;
+  }
+}
+
+.content--styles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .footer__title {
@@ -1135,9 +1149,22 @@ h6 {
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.footer__title--hover:hover .title__text {
+  color: #ccc;
+}
+.footer__title--hover:hover .title__text:hover .footer__title__word {
+  color: #ff111c;
+}
+
+.content--margin {
+  margin-bottom: 25px;
 }
 
 .title__text {
+  transition: linear 200ms;
   color: #ff111c;
 }
 
@@ -1149,7 +1176,20 @@ h6 {
 .content__link {
   font-weight: 500;
   color: #ccc;
-  font-size: 16px;
+  font-size: 17px;
+  display: block;
+  margin-bottom: 5px;
+  transition: linear 200ms;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+.content__link:hover {
+  color: #ff111c;
+  border-bottom: 2px solid #ccc;
+}
+
+.content__link--uppercase {
+  text-transform: uppercase;
 }
 
 .title1 {
