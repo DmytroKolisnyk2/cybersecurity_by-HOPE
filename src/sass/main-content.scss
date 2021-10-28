@@ -9,42 +9,66 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  &--keyword {
-    color: $main-red;
-  }
-  &--last {
+// <<<<<<< text-change
+//   &--keyword {
+//     color: $main-red;
+//   }
+//   &--last {
+// =======
+  &--after {
+    content: "";
+    display: block;
+    width: 50%;
+    // height: 50px;
+    // background-color: #fff;
+    border-bottom: $line-width double $main-red;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+// >>>>>>> master
     &::after {
-      content: '';
-      display: block;
-      width: 50%;
-      // height: 50px;
-      // background-color: #fff;
-      border-bottom: $line-width double $main-red;
-      position: absolute;
-      bottom: 0;
-      right: 0;
+      max-width: 100%;
+      @include borderFill(0, 0, 0%, 5px);
     }
+  }
+  &--before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 105px;
+    // background-color: #fff;
+    opacity: 0.4;
+    border-left: $line-width double $main-red;
+    position: absolute;
+    bottom: -100px;
+    right: calc(50% - 4px);
+    transform: translate(50%);
     &::before {
-      content: '';
-      display: block;
-      width: 5px;
-      height: 105px;
-      // background-color: #fff;
-      opacity: 0.4;
-      border-left: $line-width double $main-red;
-      position: absolute;
-      bottom: -100px;
-      right: calc(50% - 2px);
-      transform: translate(50%);
+      @include borderFill;
+    transition-delay: $transitionDelay;
     }
   }
   @media screen and (max-width: 768px) {
     flex-wrap: wrap;
   }
   &--odd {
+    &::before {
+      @include borderFill(0, 100%);
+    transition-delay: $transitionDelay;
+    }
+    &::after {
+      @include borderFill(-5px, -5px, 0%, 5px);
+    }
     border-right: $line-width $line-type $main-red;
   }
   &--even {
+    &::before {
+      @include borderFill;
+    transition-delay: $transitionDelay;
+    }
+    &::after {
+      @include borderFill(-5px, -5px, 0%, 5px);
+    }
     border-left: $line-width $line-type $main-red;
     & .section__text-wrapper {
       order: 2;

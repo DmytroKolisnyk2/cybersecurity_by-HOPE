@@ -1,0 +1,114 @@
+.cyberSecurity__footer {
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.footer__content {
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        margin-bottom: 15px;
+    }
+}
+
+.content__aboutUs {
+    width: 40%;
+    margin-bottom: 20px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+    }
+}
+
+.source__content {
+    width: 100%;
+    @media screen and (min-width: 768px) {
+        width: 50%;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content__anotherProjects {
+    margin-bottom: 0;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+        width: 60%;
+    }
+    text-align: left;
+}
+
+.content--styles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer__title {
+    color: $main-red;
+    @extend %start-2p;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.footer__title--hover:hover .title__text {
+    color: $text-color;
+    &:hover .footer__title__word {
+        color: $main-red;
+    }
+}
+
+.content--margin {
+    margin-bottom: 25px;
+}
+
+.title__text {
+    transition: $linear;
+    color: $main-red;
+}
+
+.footer__title__word {
+    transition: $linear;
+    color: $text-color;
+    text-transform: none;
+}
+
+.content__link {
+    display: inline-block;
+    font-weight: 500;
+    color: $text-color;
+    font-size: 17px;
+    margin-bottom: 5px;
+    @extend %montserrat;
+    transition: $linear;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    &:hover {
+        border-bottom: 2px solid $main-red;
+    }
+}
+
+.content__link--uppercase {
+    text-transform: uppercase;
+}
+
+.title1{
+    animation-play-state: paused;
+}
+
+.title--animation {
+    animation-play-state: running;
+}

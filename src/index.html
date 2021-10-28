@@ -5,19 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Кібербезпека</title>
   </head>
+
   <body>
     <!-- <h1 style="font-size: 200px;" class="animate__animated animate__bounce">An animated element</h1> -->
+    <include src="./partials/headerLogo.html"></include>
+    <video loop muted class="main__video">
+      <source src="./video/bg_video.mp4" type="video/mp4" />
+      <source src="./video/bg_video.ogx" type="video/ogv" />
+      <source src="./video/bg_video.webm" type="video/webm" />
+    </video>
+    <!-- <main style="visibility: visible; animation-delay: 2s; animation-name: slideInRight;" class="main wow slideInRight"> -->
+    <main class="main">
+      <!-- <div class="gallery">
+        <a href="./images/cyberSecurityImg2.jpg" data-caption="Image caption">
+          <img src="./images/cyberSecurityImg2.jpg" alt="First image">
+        </a>
+        <a href="./images/cyberSecurityImg1.jpg" data-caption="Image ">
+          <img src="./images/cyberSecurityImg1.jpg" alt="Second image">
+        </a>
+      </div> -->
 
-      <include src="./partials/headerLogo.html"></include>
-        <video loop muted class="main__video" src="./video/bg_video.mp4"></video>
-      <!-- <main style="visibility: visible; animation-delay: 2s; animation-name: slideInRight;" class="main wow slideInRight"> -->
-      <main class="main">
-        <include src="./partials/introduction.html"></include>
-        <include src="./partials/main.html"></include>
-        <include src='./partials/adviceSection.html'></include>
-        <!-- <include src='./partials/final_section.html'></include> -->
-        <include src="./partials/about-us.html"></include>
-      </main>
+      <a href="#start" class="main__arrow main__arrow--hidden">
+        <span class="arrow__svg material-icons">keyboard_arrow_down</span>
+      </a>
+      <include src="./partials/introduction.html"></include>
+      <include src="./partials/main.html"></include>
+      <include src="./partials/adviceSection.html"></include>
+      <!-- <include src='./partials/final_section.html'></include> -->
+      <include src="./partials/about-us.html"></include>
+    </main>
+  <include src="./partials/footer.html"></include>
     <script src="./index.js"></script>
   </body>
 </html>

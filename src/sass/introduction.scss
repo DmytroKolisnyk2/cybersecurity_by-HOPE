@@ -13,6 +13,10 @@
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 3;
+  @media screen and (max-width: 768px) {
+    width: 150px;
+  }
   &:hover {
     animation: appearBar 1000ms;
   }
@@ -28,6 +32,9 @@
   position: relative;
   @media screen and (max-width: 768px) {
     font-size: 20px;
+  }
+  & span{
+    color: $main-red;
   }
 }
 .introduction {
@@ -107,7 +114,15 @@
   width: 50%;
   border-top: $line-width $line-type $main-red;
   border-left: $line-width $line-type $main-red;
-}
+  &::before {
+    @include borderFill;
+    transition-delay: $transitionDelay;
+  }
+  &::after {
+    @include borderFill(-5px, -5px, 0%, 5px);
+  }
+} 
+
 .introduction__title-wrapper {
   flex-grow: 1;
   display: flex;
