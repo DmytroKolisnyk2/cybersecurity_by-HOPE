@@ -6,6 +6,14 @@ import WOW from 'wow.js/dist/wow';
 import 'wow.js/css/libs/animate.css';
 import Gumshoe from 'gumshoejs';
 import { hideHeader } from './js/hideHeader';
+import './js/checkArrow';
+
+import baguetteBox from 'baguettebox.js';
+import 'baguettebox.js/dist/baguetteBox.min.css';
+
+baguetteBox.run('.section__photo-wrapper--js-gallery',{
+  noScrollbars: true,
+})
 
 document.querySelector('.header__burger').addEventListener('click', openBar);
 document.querySelector('.aside__overlay').addEventListener('click', closeOverlayBar);
@@ -23,7 +31,8 @@ window.addEventListener('scroll', throttle(checkScroll, 150));
 
 new WOW().init();
 
-const spy = new Gumshoe('#menu a');
+const spy = new Gumshoe('#menu .list__link');
+console.log(document.querySelectorAll('#menu .list__link'))
 
 window.addEventListener('scroll', throttle(hideHeader, 100));
 const options = {
