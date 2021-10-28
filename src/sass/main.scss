@@ -7,6 +7,7 @@
 @import './main-content.scss';
 @import './aboutUs.scss';
 @import './final_section';
+@import './footer.scss';
 @import './main__arrow.scss';
 
 
@@ -17,6 +18,7 @@ footer,
 html,
 header,
 main {
+  margin: 0;
   overflow-x: hidden;
 }
 section{

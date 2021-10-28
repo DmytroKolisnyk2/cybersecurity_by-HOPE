@@ -35,3 +35,47 @@ const spy = new Gumshoe('#menu .list__link');
 console.log(document.querySelectorAll('#menu .list__link'))
 
 window.addEventListener('scroll', throttle(hideHeader, 100));
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5
+}
+const target = document.querySelector('.cyberSecurity__footer');
+const onEntry = (entries, observer) => {
+  entries.forEach(entry => {
+    const target = entry.target;
+    if (entry.isIntersecting) {
+      // console.log(target)
+      document.querySelectorAll('.title1').forEach(item => item.classList.add('title--animation'));
+        observer.unobserve(target);
+    }
+})
+};
+
+const observerFooter = new IntersectionObserver(onEntry, options);
+observerFooter.observe(target);
+
+
+const onEntryBorder = (entries, observer) => {
+  entries.forEach(entry => {
+    const target = entry.target;
+    if(entry.isIntersecting) {
+      if(target === document.querySelector('.final')) {
+        target.classList.add('appearBorder--specialWidth');
+        setTimeout(() => {
+          target.classList.add('appearBorder--specialHeight');
+        }, 1400)
+      } else {
+        target.classList.add('appearBorder');
+      }
+    }
+    // observer.unobserve(target);
+  })
+};
+
+const arrayTargets = [...document.querySelector('.main').children];
+arrayTargets.push(document.querySelector('.introduction__border'), document.querySelector('.main__section--before'), document.querySelector('.main__section--after'), document.querySelector('.block__line'));
+const observerBorder = new IntersectionObserver(onEntryBorder, options);
+arrayTargets.forEach(item => {
+  observerBorder.observe(item)
+});

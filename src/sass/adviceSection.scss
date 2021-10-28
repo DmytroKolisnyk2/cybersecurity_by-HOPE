@@ -71,10 +71,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   height: 100%;
-//   background-color: $main-red;
   border-left: 5px double $main-red;
   opacity: 0.6;
-  // z-index: -1;
+  &::before {
+    @include borderFill;
+  }
 }
 
 .advice__content__pair {
@@ -151,6 +152,7 @@
 }
 .pair1__text__title {
     color: $main-red;
+    font-size: 16px;
     text-transform: uppercase;
 }
 
