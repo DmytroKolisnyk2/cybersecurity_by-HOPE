@@ -903,7 +903,7 @@ h6 {
   transition: linear 200ms;
   color: #ccc;
   margin: 0 auto;
-  margin: 15px auto;
+  margin: 30px auto;
 }
 .section__btn > span {
   position: relative;
@@ -1044,6 +1044,11 @@ h6 {
   right: 5px;
   bottom: 5px;
   box-shadow: 0 0 100px rgba(250, 17, 28, 0.8);
+  background-size: cover;
+}
+
+.hexagon:nth-child(1)::before {
+  background: url("/dmytro_kolisnyk.b16598e6.png") no-repeat center center;
   background-size: cover;
 }
 

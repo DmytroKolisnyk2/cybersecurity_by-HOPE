@@ -50,9 +50,10 @@
   background-size: cover;
 }
 
-// .hexagon:nth-child(1)::before {
-//   // background:url("../images/dima.jpg")
-// }
+.hexagon:nth-child(1)::before {
+  background:url("../images/dmytro_kolisnyk.png") no-repeat center center;
+  background-size: cover;
+}
 .about__card:nth-child(2) .hexagon::before {
   background:url("../images/igor_yakib.jpg") no-repeat center center;
   background-size: cover;
