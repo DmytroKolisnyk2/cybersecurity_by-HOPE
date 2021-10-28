@@ -29,6 +29,9 @@
   @media screen and (max-width: 768px) {
     font-size: 20px;
   }
+  & span{
+    color: $main-red;
+  }
 }
 .introduction {
   flex-direction: column;
