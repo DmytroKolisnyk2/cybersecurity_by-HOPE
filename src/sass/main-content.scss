@@ -57,6 +57,7 @@
 }
 .section__btn {
   @include btn(20px, 400px);
+  margin: 15px auto;
 }
 .section__icon {
   color: $main-red;
@@ -102,6 +103,7 @@
   height: 100%;
   width: 100%;
   border: 2px solid $main-red;
+  margin: 10px auto;
 }
 .section__text {
   @extend %montserrat;

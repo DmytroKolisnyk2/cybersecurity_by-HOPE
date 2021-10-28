@@ -47,10 +47,20 @@
   right: 5px;
   bottom: 5px;
   box-shadow: 0 0 100px rgba(250,17,28,0.8);
-  background:url(http://webneel.com/daily/sites/default/files/images/daily/09-2014/6-nature-photography-pedraterrinha.jpg) no-repeat center center;
   background-size: cover;
 }
 
+// .hexagon:nth-child(1)::before {
+//   // background:url("../images/dima.jpg")
+// }
+.about__card:nth-child(2) .hexagon::before {
+  background:url("../images/igor_yakib.jpg") no-repeat center center;
+  background-size: cover;
+}
+.about__card:nth-child(3) .hexagon::before {
+  background:url("../images/max_popsuy.jpg") no-repeat center center;
+  background-size: cover;
+}
 
 .hexagon,
 .hexagon::before {

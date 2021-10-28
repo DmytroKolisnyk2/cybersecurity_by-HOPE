@@ -903,6 +903,7 @@ h6 {
   transition: linear 200ms;
   color: #ccc;
   margin: 0 auto;
+  margin: 15px auto;
 }
 .section__btn > span {
   position: relative;
@@ -965,6 +966,7 @@ h6 {
   height: 100%;
   width: 100%;
   border: 2px solid #ff111c;
+  margin: 10px auto;
 }
 
 .section__text {
@@ -1042,7 +1044,16 @@ h6 {
   right: 5px;
   bottom: 5px;
   box-shadow: 0 0 100px rgba(250, 17, 28, 0.8);
-  background: url(http://webneel.com/daily/sites/default/files/images/daily/09-2014/6-nature-photography-pedraterrinha.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.about__card:nth-child(2) .hexagon::before {
+  background: url("/igor_yakib.15a67f86.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.about__card:nth-child(3) .hexagon::before {
+  background: url("/max_popsuy.30c2a167.jpg") no-repeat center center;
   background-size: cover;
 }
 
