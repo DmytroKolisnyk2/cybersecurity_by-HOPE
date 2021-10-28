@@ -11,7 +11,9 @@ import './js/checkArrow';
 import baguetteBox from 'baguettebox.js';
 import 'baguettebox.js/dist/baguetteBox.min.css';
 
-baguetteBox.run('.gallery')
+baguetteBox.run('.section__photo-wrapper--js-gallery',{
+  noScrollbars: true,
+})
 
 document.querySelector('.header__burger').addEventListener('click', openBar);
 document.querySelector('.aside__overlay').addEventListener('click', closeOverlayBar);

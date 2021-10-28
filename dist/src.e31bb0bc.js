@@ -1320,7 +1320,9 @@ require("baguettebox.js/dist/baguetteBox.min.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_baguettebox.default.run('.gallery');
+_baguettebox.default.run('.section__photo-wrapper--js-gallery', {
+  noScrollbars: true
+});
 
 document.querySelector('.header__burger').addEventListener('click', _openBar.openBar);
 document.querySelector('.aside__overlay').addEventListener('click', _openBar.closeOverlayBar);
