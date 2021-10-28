@@ -9,6 +9,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+// <<<<<<< text-change
+//   &--keyword {
+//     color: $main-red;
+//   }
+//   &--last {
+// =======
   &--after {
     content: "";
     display: block;
@@ -19,6 +25,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
+// >>>>>>> master
     &::after {
       max-width: 100%;
       @include borderFill(0, 0, 0%, 5px);
@@ -77,6 +84,7 @@
 }
 .section__btn {
   @include btn(20px, 400px);
+  margin: 30px auto;
 }
 .section__icon {
   color: $main-red;
@@ -122,6 +130,7 @@
   height: 100%;
   width: 100%;
   border: 2px solid $main-red;
+  margin: 10px auto;
 }
 .section__text {
   @extend %montserrat;
