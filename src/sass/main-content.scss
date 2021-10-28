@@ -38,6 +38,7 @@
     transform: translate(50%);
     &::before {
       @include borderFill;
+    transition-delay: $transitionDelay;
     }
   }
   @media screen and (max-width: 768px) {
@@ -46,6 +47,7 @@
   &--odd {
     &::before {
       @include borderFill(0, 100%);
+    transition-delay: $transitionDelay;
     }
     &::after {
       @include borderFill(-5px, -5px, 0%, 5px);
@@ -55,6 +57,7 @@
   &--even {
     &::before {
       @include borderFill;
+    transition-delay: $transitionDelay;
     }
     &::after {
       @include borderFill(-5px, -5px, 0%, 5px);

@@ -53,9 +53,13 @@
     pointer-events: none;
     position: relative;
     top: -200px;
+    transition: $linear;
     animation: appearTitle 550ms linear 1s forwards;
     @media screen and (min-width: 840px) {
         font-size: 18px;
+    }
+    &:hover {
+        color: $text-color;
     }
 }
 

@@ -30,7 +30,12 @@
   max-width: 1500px;
   margin: 0 auto;
   border-radius: 40px;
+  position: relative;
   &::after {
-    @include borderFill(-5px, -5px, 0%, 5px);
+    @include borderFill(-3px, 50%, 0%, 5px);
+    border-top: 5px solid $main-red;
+    background-color: transparent;
+    border-radius: 40px;
+    transform: translate(-50%, -50%);
   }
 }

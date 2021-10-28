@@ -51,12 +51,19 @@ const onEntryBorder = (entries, observer) => {
   entries.forEach(entry => {
     const target = entry.target;
     if(entry.isIntersecting) {
-      console.log(target);
-      target.classList.add('appearBorder');
+      if(target === document.querySelector('.final')) {
+        target.classList.add('appearBorder--specialWidth');
+        setTimeout(() => {
+          target.classList.add('appearBorder--specialHeight');
+        }, 1400)
+      } else {
+        target.classList.add('appearBorder');
+      }
     }
     // observer.unobserve(target);
   })
 };
+
 const arrayTargets = [...document.querySelector('.main').children];
 arrayTargets.push(document.querySelector('.introduction__border'), document.querySelector('.main__section--before'), document.querySelector('.main__section--after'), document.querySelector('.block__line'));
 const observerBorder = new IntersectionObserver(onEntryBorder, options);
