@@ -8,6 +8,11 @@ import Gumshoe from 'gumshoejs';
 import { hideHeader } from './js/hideHeader';
 import './js/checkArrow';
 
+import baguetteBox from 'baguettebox.js';
+import 'baguettebox.js/dist/baguetteBox.min.css';
+
+baguetteBox.run('.gallery')
+
 document.querySelector('.header__burger').addEventListener('click', openBar);
 document.querySelector('.aside__overlay').addEventListener('click', closeOverlayBar);
 
