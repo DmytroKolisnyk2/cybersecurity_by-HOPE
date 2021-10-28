@@ -9,6 +9,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &--keyword {
+    color: $main-red;
+  }
   &--last {
     &::after {
       content: '';
