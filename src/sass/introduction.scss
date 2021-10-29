@@ -119,7 +119,7 @@
     transition-delay: $transitionDelay;
   }
   &::after {
-    @include borderFill(-5px, -5px, 0%, 5px);
+    @include borderFillRight(-5px, -5px, 0%, 5px);
   }
 } 
 
