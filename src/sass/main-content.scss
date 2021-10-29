@@ -26,7 +26,7 @@
     &::after {
       max-width: 100%;
       @include borderFillRight(0, 0, 0%, 5px);
-      transition-delay: 4s;
+      transition-delay: 6s;
     }
   }
   &--before {
@@ -43,7 +43,7 @@
     transform: translate(50%);
     &::before {
       @include borderFill;
-      transition-delay: 6s;
+      transition-delay: 8s;
     }
   }
   @media screen and (max-width: 768px) {
@@ -52,20 +52,22 @@
   &--odd {
     &::before {
       @include borderFill(0, 100%);
-      transition-delay: $transitionDelay;
+      transition-delay: 4s;
     }
     &::after {
       @include borderFill(-5px, -5px, 0%, 5px);
+      transition-delay: 2s;
     }
     border-right: $line-width $line-type $main-red;
   }
   &--even {
     &::before {
       @include borderFill;
-      transition-delay: $transitionDelay;
+      transition-delay: 4s;
     }
     &::after {
       @include borderFillRight(-5px, -5px, 0%, 5px);
+      transition-delay: 2s;
     }
     border-left: $line-width $line-type $main-red;
     & .section__text-wrapper {
