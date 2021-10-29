@@ -1343,7 +1343,7 @@ window.addEventListener('scroll', (0, _lodash.default)(_hideHeader.hideHeader, 1
 const options = {
   root: null,
   rootMargin: '0px',
-  threshold: window.screen.width <= 768 ? 0.2 : 0.5
+  threshold: window.screen.width <= 768 ? 0.2 : 0.65
 };
 console.log(options.threshold);
 const target = document.querySelector('.cyberSecurity__footer');
@@ -1415,7 +1415,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34605" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45447" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

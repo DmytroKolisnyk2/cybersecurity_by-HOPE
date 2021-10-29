@@ -937,6 +937,7 @@ h6 {
   background-color: #ff111c;
   border-radius: 5px;
   transition: linear 2000ms;
+  transition-delay: 4s;
 }
 .main__section--before {
   content: "";
@@ -961,7 +962,7 @@ h6 {
   background-color: #ff111c;
   border-radius: 5px;
   transition: linear 2000ms;
-  transition-delay: 2000ms;
+  transition-delay: 6s;
 }
 @media screen and (max-width: 768px) {
   .main__section {
@@ -1335,15 +1336,16 @@ h6 {
 
 .cyberSecurity__footer {
   max-width: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.85);
   width: 100%;
   padding: 10px 20px;
   text-align: center;
   overflow: hidden;
+  text-align: left;
 }
 
 .footer__content {
-  max-width: 1500px;
+  max-width: 900px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -1359,43 +1361,30 @@ h6 {
 }
 
 .content__aboutUs {
-  width: 40%;
+  max-width: 380px;
+  width: 100%;
   margin-bottom: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .content__aboutUs {
-    margin-bottom: 0;
+    margin-bottom: 25px;
+    text-align: center;
   }
 }
 
 .source__content {
-  width: 100%;
+  width: 380px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-@media screen and (min-width: 768px) {
-  .source__content {
-    width: 50%;
-  }
-}
-
 .content__anotherProjects {
   margin-bottom: 0;
-  width: 100%;
-  text-align: left;
 }
 @media screen and (min-width: 768px) {
   .content__anotherProjects {
-    width: 60%;
+    max-width: 100%;
   }
-}
-
-.content--styles {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .footer__title {
@@ -1429,6 +1418,7 @@ h6 {
 }
 
 .content__link {
+  text-align: left;
   display: inline-block;
   font-weight: 500;
   color: #ccc;

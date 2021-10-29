@@ -12,9 +12,9 @@
   &--keyword {
     color: $main-red;
   }
-//   &--last {
+  //   &--last {
   &--after {
-    content: "";
+    content: '';
     display: block;
     width: 50%;
     // height: 50px;
@@ -26,10 +26,11 @@
     &::after {
       max-width: 100%;
       @include borderFillRight(0, 0, 0%, 5px);
+      transition-delay: 4s;
     }
   }
   &--before {
-    content: "";
+    content: '';
     display: block;
     width: 5px;
     height: 105px;
@@ -42,7 +43,7 @@
     transform: translate(50%);
     &::before {
       @include borderFill;
-    transition-delay: $transitionDelay;
+      transition-delay: 6s;
     }
   }
   @media screen and (max-width: 768px) {
@@ -51,7 +52,7 @@
   &--odd {
     &::before {
       @include borderFill(0, 100%);
-    transition-delay: $transitionDelay;
+      transition-delay: $transitionDelay;
     }
     &::after {
       @include borderFill(-5px, -5px, 0%, 5px);
@@ -61,7 +62,7 @@
   &--even {
     &::before {
       @include borderFill;
-    transition-delay: $transitionDelay;
+      transition-delay: $transitionDelay;
     }
     &::after {
       @include borderFillRight(-5px, -5px, 0%, 5px);

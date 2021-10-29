@@ -38,7 +38,7 @@ window.addEventListener('scroll', throttle(hideHeader, 100));
 const options = {
   root: null,
   rootMargin: '0px',
-  threshold: window.screen.width <= 768 ? 0.2 : 0.5,
+  threshold: window.screen.width <= 768 ? 0.2 : 0.65,
 };
 console.log(options.threshold);
 const target = document.querySelector('.cyberSecurity__footer');
