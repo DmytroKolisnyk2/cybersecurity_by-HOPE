@@ -120,6 +120,9 @@
   justify-content: space-between;
   align-items: center;
   transition: all 0.7s;
+  &--small{
+    width: 120px;
+  }
 }
 .about__card__title {
   margin-right: 25px;
