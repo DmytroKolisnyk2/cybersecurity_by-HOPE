@@ -14,7 +14,7 @@
   }
   //   &--last {
   &--after {
-    content: '';
+    content: "";
     display: block;
     width: 50%;
     // height: 50px;
@@ -30,7 +30,7 @@
     }
   }
   &--before {
-    content: '';
+    content: "";
     display: block;
     width: 5px;
     height: 105px;
@@ -122,6 +122,13 @@
   left: -18px;
   position: absolute;
 }
+#fishing-site, #console  {
+  & .section__photo-wrapper {
+    @media screen and (min-width: 769px) {
+      max-width: 35%;
+    }
+  }
+}
 .section__photo-wrapper {
   padding: 15px;
 }
@@ -137,13 +144,14 @@
   color: $text-color;
   margin-bottom: 20px;
   font-size: 20px;
-  & span{
+  & span {
     color: $main-red;
-  }& .section__headline{
+  }
+  & .section__headline {
     color: $main-red;
     @extend %start-2p;
     font-size: 16px;
-    &--main{
+    &--main {
       font-size: 20px;
       text-align: center;
       display: block;
@@ -162,5 +170,50 @@
   }
   @media screen and (max-width: 468px) {
     padding: 10px;
+  }
+}
+.section__input {
+  background-color: $main-black;
+  max-width: 350px;
+  width: 100%;
+  line-height: 0;
+  padding: 2px 10px 5px;
+  color: $text-color;
+  font-size: 22px;
+  border: 2px solid $main-red;
+  display: block;
+  transition: $linear;
+  margin: -4px 0 0 15px;
+  &::placeholder{
+    font-size: 18px;
+  }
+  @extend %montserrat;
+  &:focus {
+    border: 2px solid $text-color;
+  }
+}
+.section__copied-text {
+  background-color: $main-black;
+  position: relative;
+  display: block;
+    max-width: 350px;
+    margin: 20px 15px 20px;
+
+  & .section__textarea {
+    padding: 15px 40px 15px 20px;
+    color: $text-color;
+    font-size: 12px;
+    @extend %start-2p;
+    resize: none;
+    width: 100%;
+    background-color: transparent;
+    overflow: hidden;
+    border: 2px solid $main-red;
+  }
+  & span {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
   }
 }
