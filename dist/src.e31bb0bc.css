@@ -1131,6 +1131,11 @@ h6 {
   color: #ff111c;
   font-size: 16px;
 }
+.section__text .section__headline--main {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+}
 @media screen and (max-width: 468px) {
   .section__text {
     font-size: 16px;
@@ -1463,20 +1468,17 @@ h6 {
 }
 
 .main__arrow {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  cursor: pointer;
+  transition: linear 200ms;
+}
+.main__arrow-wrapper {
   bottom: 30px;
   left: 20px;
   position: fixed;
-  width: 50px;
-  height: 50px;
-  background-color: #ff111c;
-  border-radius: 50%;
   z-index: 5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: linear 200ms;
-  box-shadow: 0px 2px 2px rgba(255, 255, 255, 0.12), 0px 8px 8px rgba(255, 255, 255, 0.06), 2px 8px 12px rgba(255, 255, 255, 0.16);
 }
 .main__arrow--hidden {
   opacity: 0;
@@ -1484,18 +1486,26 @@ h6 {
   position: none;
   transform: scale(0);
 }
-.main__arrow:hover {
-  background-color: #ccc;
-}
 .main__arrow:hover span {
-  color: #ff111c;
+  color: #222;
+}
+.main__arrow:hover svg {
+  fill: #ff111c;
+}
+.main__arrow svg {
+  transition: linear 200ms;
 }
 .main__arrow span {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  left: 0;
   line-height: 0;
   font-size: 40px !important;
   transition: linear 200ms;
   transform: rotate(180deg);
-  color: #222;
+  color: #ff111c;
 }
 
 body {

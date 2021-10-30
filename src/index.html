@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
     <title>Кібербезпека</title>
   </head>
 
@@ -26,16 +26,26 @@
         </a>
       </div> -->
 
-      <a href="#start" class="main__arrow main__arrow--hidden">
+      <!-- <a href="#start" class="main__arrow main__arrow--hidden">
         <span class="arrow__svg material-icons">keyboard_arrow_down</span>
-      </a>
+      </a> -->
+      <div class="main__arrow-wrapper">
+        <a href="#start" class="block main__arrow main__arrow--hidden">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 252">
+            <path
+              d="M75.173,251.959L0,126.152l74.827-126l150-0.193L300,125.766l-74.827,126L75.173,251.959z"
+            />
+          </svg>
+          <span class="arrow__svg material-icons">keyboard_arrow_down</span>
+        </a>
+      </div>
       <include src="./partials/introduction.html"></include>
       <include src="./partials/main.html"></include>
       <include src="./partials/adviceSection.html"></include>
       <!-- <include src='./partials/final_section.html'></include> -->
       <include src="./partials/about-us.html"></include>
     </main>
-  <include src="./partials/footer.html"></include>
+    <include src="./partials/footer.html"></include>
     <script src="./index.js"></script>
   </body>
 </html>

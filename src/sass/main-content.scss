@@ -143,6 +143,11 @@
     color: $main-red;
     @extend %start-2p;
     font-size: 16px;
+    &--main{
+      font-size: 20px;
+      text-align: center;
+      display: block;
+    }
   }
   @media screen and (max-width: 468px) {
     font-size: 16px;
