@@ -38,7 +38,7 @@ window.addEventListener('scroll', throttle(hideHeader, 100));
 const options = {
   root: null,
   rootMargin: '0px',
-  threshold: window.screen.width <= 768 ? 0.1 : 0.65,
+  threshold: window.screen.width <= 768 ? 0.1 : 0.5,
 };
 console.log(options.threshold);
 const target = document.querySelector('.cyberSecurity__footer');
@@ -84,3 +84,6 @@ const observerBorder = new IntersectionObserver(onEntryBorder, options);
 arrayTargets.forEach(item => {
   observerBorder.observe(item);
 });
+[...document.querySelectorAll('a')].forEach(element =>
+  element.setAttribute('rel', 'noreferrer noopener nofollow'),
+);

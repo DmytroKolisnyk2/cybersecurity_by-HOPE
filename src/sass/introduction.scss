@@ -27,13 +27,13 @@
   text-align: center;
   color: $text-color;
   // padding-top: 25vh;
-  max-width: 700px;
+  max-width: 810px;
   z-index: 2;
   position: relative;
   @media screen and (max-width: 768px) {
     font-size: 20px;
   }
-  & span{
+  & span {
     color: $main-red;
   }
 }
@@ -121,7 +121,7 @@
   &::after {
     @include borderFillRight(-5px, -5px, 0%, 5px);
   }
-} 
+}
 
 .introduction__title-wrapper {
   flex-grow: 1;
