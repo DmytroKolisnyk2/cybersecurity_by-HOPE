@@ -16,7 +16,7 @@
     z-index: 10;
   }
 }
-.header__wrapper{
+.header__wrapper {
   transition: $linear;
   opacity: 1;
 }
@@ -103,7 +103,7 @@
       right: 0;
       max-width: 228px;
       width: 100%;
-      content: '';
+      content: "";
       display: block;
       height: 85px;
       background-color: $main-black;
@@ -115,7 +115,7 @@
       top: -85px;
       right: -60px;
       width: 100px;
-      content: '';
+      content: "";
       display: block;
       height: 185px;
       transform: skew(-20deg);
@@ -183,7 +183,7 @@
   align-items: center;
   justify-content: space-between;
   max-width: 600px;
-  width: 100%;
+  width: 55%;
   @media screen and (max-width: 840px) {
     z-index: 4;
 
@@ -222,32 +222,31 @@
 .menu__list {
 }
 
-
 .list__submenu {
+  text-align: left;
+  padding: 2px;
   display: none;
   z-index: 11;
   background: $main-black;
-  border-radius: 5px;
   border: 1px solid $main-red;
 }
 .submenu__item {
-  text-align: center;
+  // text-align: center;
 }
-.list__item:hover .list__submenu{
+.list__item:hover .list__submenu {
   display: block;
   position: absolute;
   left: 0;
-  padding: 10px 20px;
+  padding: 5px 5px 5px 10px;
 }
 
-.menu__list{
+.menu__list {
   position: absolute;
   transform: translateY(-50%);
 }
 
 @media screen and (max-width: 840px) {
-
-  .menu__list{
+  .menu__list {
     position: relative;
     transform: skewX(-20deg);
   }
@@ -257,7 +256,7 @@
   font-size: 14px;
   font-weight: 400;
   position: relative;
-  line-height: 2; 
+  line-height: 2;
 }
 
 .list__link {
@@ -270,25 +269,25 @@
   margin: 10px 0;
 }
 
-.submenu__link{
+.submenu__link {
   padding-bottom: 4px;
   color: $main-red;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  @extend %start-2p; 
+  @extend %start-2p;
   transition: $linear;
-
+  text-align: left;
   &:hover {
     border-bottom: 3px double $main-red;
   }
 }
 
 .list__link:hover::after,
-.list__link:focus::after{
+.list__link:focus::after {
   width: 100%;
 }
 
-.list__link::after{
+.list__link::after {
   display: block;
   content: "";
   height: 2px;
@@ -296,5 +295,5 @@
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
-  transition: width .6s ease-in-out;
+  transition: width 0.6s ease-in-out;
 }
