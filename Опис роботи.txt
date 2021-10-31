@@ -44,3 +44,4 @@ https://dmytrokolisnyk2.github.io/cybersecurity_by-HOPE/dist/
 - Не оптимізований код в папці src
 - Код клону instagram в папці instagram
 - Інструкція по встановленню та налаштуванню parcel https://github.com/goitacademy/parcel-project-template#readme
+- посилання на репозиторій проєкту https://github.com/DmytroKolisnyk2/cybersecurity_by-HOPE
