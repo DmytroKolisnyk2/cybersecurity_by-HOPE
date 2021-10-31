@@ -48,6 +48,7 @@ const checkWrittenInput = () => {
 
 window.sayHello = () => {
   if (!document.querySelector('.successful-text')) {
+    console.clear();
     document.querySelector('#console-text').insertAdjacentHTML('beforeend', `<span class="section__headline section__headline--main successful-text">І який же результат?</span><br>
       ${checkWrittenInput()} <br><br>
       Таким чином навіть ввід даних у поле із <span>type="password"</span> не заважає зловмиснику отримати дані із інпута. <br>
@@ -115,6 +116,7 @@ arrayTargets.forEach(item => {
 const copyBtnRef = document.querySelector('.copy-console-text-js');
 
 copyBtnRef.addEventListener('click', () => {
+  console.clear();
   const textareaRef = document.querySelector('.section__textarea');
   textareaRef.removeAttribute('disabled');
   textareaRef.select();
